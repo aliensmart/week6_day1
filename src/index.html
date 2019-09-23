@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Intro</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sample Code</h1>
+        <p>Day1 of Javascript</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="inputElements">
+                <input type="text" id="theInput" placeholder="Enter your text">
+                <button id="button">Click Me</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="output"></div>
+        </div>
+    </main>
+
+
+    <script>
+        let input = document.getElementById("theInput");
+        let output = document.getElementById("output");
+        let button = document.getElementById("button");
+
+        function outputText(text){
+            output.innerHTML += "<p>" + text +"</p>"
+        }
+
+        button.addEventListener("click", (e) => {outputText("input")})
+    </script>
+
+    <script class="notes">
+        // const sample = 12
+        let sample = 12
+        sample +=4
+        console.log(sample);
+
+        let ourString = "this is our string"
+        console.log(ourString.length)
+        console.log(ourString.charAt(5))
+
+        const ourArray = [1,2,3,4,5]
+        console.log(ourArray.slice(1,3))
+
+        if(ourString > 15){
+            console.log("this is a long string")
+        }else if(ourString < 6){
+            console.log("that's a small string")
+        }else{
+            console.log("it is a medium string")
+        }
+
+        for (let i=0; i<8; i++){
+            console.log(ourArray[i])
+        }
+
+        for (let i of ourArray){
+            console.log(i)
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
